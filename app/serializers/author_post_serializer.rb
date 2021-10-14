@@ -1,4 +1,4 @@
-class PostShortContentSerializer < ActiveModel::Serializer
+class AuthorPostSerializer < ActiveModel::Serializer
   attributes :title, :short_content
 
   belongs_to :author
@@ -8,5 +8,4 @@ class PostShortContentSerializer < ActiveModel::Serializer
   def short_content
     "#{self.object.content[0...40]}..."
   end
-
 end
